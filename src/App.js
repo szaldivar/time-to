@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <p>{seconds.toLocaleString("es-MX")}</p>
+        <p>Faltan {seconds.toLocaleString("es-MX")} segundos para vernos 🙈</p>
       </div>
     </div>
   );
