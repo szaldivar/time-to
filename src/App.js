@@ -6,12 +6,12 @@ const DATE_TIME = new Date("2021-12-04T16:30:00.000Z").getTime();
 function App() {
   const [seconds, setSeconds] = useState(() => {
     let timeto = DATE_TIME - new Date().getTime();
-    return (timeto / 1000).toFixed(0);
+    return Math.floor(timeto / 1000);
   });
 
   useEffect(() => {
     let intervalID = setInterval(() => {
-      setSeconds(((DATE_TIME - new Date().getTime()) / 1000).toFixed(0));
+      setSeconds(Math.floor((DATE_TIME - new Date().getTime()) / 1000));
     }, 1000);
     return () => clearInterval(intervalID);
   }, []);
