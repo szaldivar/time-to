@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const DATE_TIME = new Date("2021-12-04T16:30:00.000Z").getTime();
+const DATE_TIME = new Date("2021-12-04T16:40:00.000Z").getTime();
 const DATE_TIME2 = new Date("2021-12-04T18:00:00.000Z").getTime();
 
 function App() {
@@ -23,7 +23,6 @@ function App() {
 
   useEffect(() => {
     if (seconds < 0) {
-      console.log("here");
       if (interval1Ref.current) {
         clearInterval(interval1Ref.current);
         interval1Ref.current = null;
@@ -50,9 +49,18 @@ function App() {
               src="/time-to/ticket.jpg"
               alt="ticket"
             />
-            <div>
-              Siguiente sorpresa en {seconds2.toLocaleString("es-MX")} segundos
-            </div>
+            {seconds2 > 0 ? (
+              <div>
+                Siguiente sorpresa en {seconds2.toLocaleString("es-MX")}{" "}
+                segundos
+              </div>
+            ) : (
+              <div>
+                <a href="https://drive.google.com/drive/folders/1oVii4CAY0Ujk8oaI9kcQPiXBLvDhciWp?usp=sharing">
+                  No te rías mucho
+                </a>
+              </div>
+            )}
           </div>
         )}
       </div>
