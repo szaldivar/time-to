@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const DATE_TIME = new Date("2021-12-04T16:40:00.000Z").getTime();
-const DATE_TIME2 = new Date("2021-12-04T18:00:00.000Z").getTime();
+const DATE_TIME = new Date("2021-12-11T19:00:00.000Z").getTime();
+const DATE_TIME2 = new Date("2021-12-11T20:00:00.000Z").getTime();
 
 function App() {
   const [seconds, setSeconds] = useState(() => {
