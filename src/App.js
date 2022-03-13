@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 const DATE_TIME_LAST_SAW = new Date("2022-02-07T11:30:01.000Z").getTime();
-const DATE_TIME_WILL_SEE = new Date("2022-06-12T18:30:00.000Z").getTime();
+const DATE_TIME_WILL_SEE = new Date("2022-06-21T18:30:00.000Z").getTime();
 const DATE_TIME_SINCE = new Date("2021-12-12T16:05:00.000Z").getTime();
 const TOTAL_BETWEEN = DATE_TIME_WILL_SEE - DATE_TIME_LAST_SAW;
 
