@@ -78,14 +78,18 @@ function App() {
       <div className="App-header">
         {seconds > 0 ? (
           <>
-            <p>
+            <p style={{ padding: "0 15px" }}>
               Faltan {seconds.toLocaleString("es-MX")} segundos para vernos 🙈
             </p>
-            <p style={{ maxWidth: "450px" }}>Faltan {htimeTo}</p>
+            <p style={{ padding: "0 15px" }}>Faltan {htimeTo}</p>
           </>
         ) : null}
-        {seconds > 0 ? <p>Llevamos {progress}% de la espera</p> : null}
-        <p>Llevamos {seconds2.toLocaleString("es-MX")} segundos juntos ❤️</p>
+        {seconds > 0 ? (
+          <p style={{ padding: "0 15px" }}>Llevamos {progress}% de la espera</p>
+        ) : null}
+        <p style={{ padding: "0 15px" }}>
+          Llevamos {seconds2.toLocaleString("es-MX")} segundos juntos ❤️
+        </p>
       </div>
       <div
         style={{
