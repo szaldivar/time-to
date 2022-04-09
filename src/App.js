@@ -81,7 +81,7 @@ function App() {
             <p>
               Faltan {seconds.toLocaleString("es-MX")} segundos para vernos 🙈
             </p>
-            <p>Faltan {htimeTo}</p>
+            <p style={{ maxWidth: "450px" }}>Faltan {htimeTo}</p>
           </>
         ) : null}
         {seconds > 0 ? <p>Llevamos {progress}% de la espera</p> : null}
