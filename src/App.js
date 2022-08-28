@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const DATE_TIME_LAST_SAW = new Date("2022-07-24T12:15:00.000Z").getTime();
@@ -55,10 +55,8 @@ function App() {
     return (((timeNow - DATE_TIME_LAST_SAW) / TOTAL_BETWEEN) * 100).toFixed(2);
   });
 
-  const interval1Ref = useRef(null);
-
   useEffect(() => {
-    interval1Ref.current = setInterval(() => {
+    let intervalID = setInterval(() => {
       let timeNow = new Date().getTime();
       let secondsAux = Math.floor((DATE_TIME_WILL_SEE - timeNow) / 1000);
       setSeconds(secondsAux);
@@ -71,6 +69,9 @@ function App() {
           (((timeNow - DATE_TIME_LAST_SAW) / TOTAL_BETWEEN) * 100).toFixed(2)
         );
     }, 1000);
+    return () => {
+      clearInterval(intervalID);
+    };
   }, []);
 
   return (
